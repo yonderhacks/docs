@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Governance &mdash; documentación de Yonder Hacks - 1.0.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Safeguarding" href="safeguarding.html" />
+    <link rel="prev" title="Contributor’s Guide" href="contributing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Yonder Hacks
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                main
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributor’s Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Governance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#principles">Principles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#openness">Openness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transparency">Transparency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meritocracy">Meritocracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#consensus-decision-making">Consensus Decision Making</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conflict-resolution">Conflict Resolution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#refereeing">Refereeing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#last-resort">Last Resort</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#roles">Roles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project-team">Project/Team</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-lead">Project Lead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maintainers">Maintainers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#committers">Committers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yonder-hacks-steering-committee">Yonder Hacks Steering Committee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mentor">Mentor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sponsor">Sponsor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#making-contributions">Making Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elections-and-formal-votes">Elections and Formal Votes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#maintainer-elections">Maintainer Elections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#committer-elections">Committer Elections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-lead-elections">Project Lead Elections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#formal-votes">Formal Votes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#project-governance">Project Governance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-project-life-cycle">Basic Project Life Cycle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requesting-reviews-reviews-and-voting">Requesting Reviews, Reviews and Voting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forming-a-project">Forming a Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-proposal-review">Project Proposal Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incubating-a-project">Incubating a Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archiving-an-incubating-project">Archiving an Incubating project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mature-projects">Mature Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archival-review">Archival Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archived-projects">Archived Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptional-circumstances">Exceptional Circumstances</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#projects-without-project-lead">Projects without Project Lead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incubation-projects-without-mentor">Incubation projects without Mentor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-history">Change History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maintainer">Maintainer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safeguarding.html">Safeguarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notices.html">Notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Yonder Hacks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Governance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/yonderhacks/docs/blob/main/docs/governance.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="governance">
+<h1>Governance<a class="headerlink" href="#governance" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>This poicy is implemented as the binding document that governs our internal working policy, effective January 2020, and will be reviewed periodically (see revision sections). The last modification was made in February 2022.</p>
+<section id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>The goals of Yonder Hacks” Governance are to:</p>
+<ul class="simple">
+<li><p>Create a set of minimum requirements for any project or sub-project we host</p></li>
+<li><p>Create a lightweight project life cycle that:
+- leads the project to articulate its goals and how to achieve them,
+- encourages desired behaviors (e.g., open development),
+- provides motivation for the project to succeed,
+- leads to non-viable projects failing quickly, and
+- provides opportunities for other community members.</p></li>
+<li><p>Avoid bureaucracy, i.e., the life cycle should be as informal as possible,</p></li>
+<li><p>Encourage Yonder Hacks-related projects to be hosted on our official platform rather than elsewhere, and</p></li>
+<li><p>Set clear expectations to vendors, upstream and downstream projects, and community members.</p></li>
+</ul>
+</section>
+<section id="principles">
+<h2>Principles<a class="headerlink" href="#principles" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="openness">
+<h3>Openness<a class="headerlink" href="#openness" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Yonder Hacks is open to all individuals in their individual capacities, and provides the same opportunity to all. Everyone participates with the same rules. There are no rules to exclude, prima facie, any potential individual contributors, which include individuals associated with direct competitors in the marketplace.</p>
+</section>
+<section id="transparency">
+<h3>Transparency<a class="headerlink" href="#transparency" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>All project discussions, minutes, deliberations, project plans, designs, plans for new features, and other artifacts shall be open, public, searchable, and easily accessible to everyone.</p>
+</section>
+<section id="meritocracy">
+<h3>Meritocracy<a class="headerlink" href="#meritocracy" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The Yonder Hacks community is a meritocracy. The more you contribute, the more responsibility you will earn. Leadership roles in Yonder Hacks are also merit-based and earned by peer acclaim.</p>
+</section>
+<section id="consensus-decision-making">
+<h3>Consensus Decision Making<a class="headerlink" href="#consensus-decision-making" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Yonder Hacks projects or teams are self-governing and driven by the people who volunteer for the job. When more formal decision making and coordination is required, decisions are taken with a <a class="reference external" href="http://openoffice.apache.org/docs/governance/lazyConsensus.html">«lazy consensus»</a> approach: a few positive votes with no negative vote is enough to get going.</p>
+<p>Sometimes a member of the community will believe a specific action is the correct one for the community but are not sure enough to proceed with the work under the lazy consensus model. In these circumstances they can state “Lazy Consensus” is in operation.</p>
+<p>What this means is that they make a proposal and state that they will start implementing it in <strong>72 hours</strong> unless someone objects. 72 hours is chosen because it accounts for different timezones and non-Yonder Hacks commitments. If the 72 hours are touching a weekend/holidays it would be wise to extend the timeframe a bit. This will ensure that people can participate in the proposal even when they were offline over the weekend.</p>
+<p>Voting is done with numbers:</p>
+<ul class="simple">
+<li><p>+1 : a positive vote</p></li>
+<li><p>0 : abstain, have no opinion</p></li>
+<li><p>-1 : a negative vote</p></li>
+</ul>
+<p>A negative vote should include an alternative proposal or a detailed explanation of the reasons for the negative vote. The project community then tries to gather consensus on an alternative proposal that resolves the issue. In the great majority of cases, the concerns leading to the negative vote can be addressed.</p>
+</section>
+</section>
+<section id="conflict-resolution">
+<h2>Conflict Resolution<a class="headerlink" href="#conflict-resolution" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="refereeing">
+<h3>Refereeing<a class="headerlink" href="#refereeing" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Yonder Hacks” projects and teams are not democracies, but meritocracies. In situations where there is disagreement on issues related to the day-to-day running of the project, Committers and Project Leads are expected to act as referees and make a decision on behalf of the Yonder Hacks community. Referees should consider whether making a decision may be divisive and damaging for the
+Yonder Hacks community. In such cases, the committers of the project can privately vote on an issue, giving the decision more weight.</p>
+</section>
+<section id="last-resort">
+<h3>Last Resort<a class="headerlink" href="#last-resort" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>In some rare cases, the lazy consensus approach may lead to the community being paralyzed. Thus, as a last resort when consensus cannot be achieved on a question internal to a project, the final decision will be made by a secret ballot majority vote amongst the committers and project lead. If the vote is tied, the project lead gets an extra vote to break the tie.</p>
+<p>For questions that affect several projects, committers and project leads of mature projects will hold a secret ballot majority vote. If the vote is tied, the Yonder Hacks Steering Committee will break the tie through a casting vote.</p>
+</section>
+</section>
+<section id="roles">
+<h2>Roles<a class="headerlink" href="#roles" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="project-team">
+<h3>Project/Team<a class="headerlink" href="#project-team" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Yonder Hacks organizes her projects into a number of hacks, which follow the Project Governance (or Project Lifecycle) as outlined in this document. Projects are run by individuals and are often referred to as teams to highlight the collaborative nature of development. For example, each project has a repo on the official GitHub Organization including this one.</p>
+</section>
+<section id="project-lead">
+<h3>Project Lead<a class="headerlink" href="#project-lead" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Yonder Hacks projects and teams are managed by a Project Lead, who is also a committer of the project/team they lead. Project Lead is the public figurehead of the project and is responsible for the health of the project. Due to their status in the community, project leads can also act as referees should disagreements amongst committers of the project arise. The project lead
+typically also has write access to resources, such as the web page of a specific project.</p>
+</section>
+<section id="maintainers">
+<h3>Maintainers<a class="headerlink" href="#maintainers" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Maintainers own one or several components in a project hosted by Yonder Hacks. A maintainer reviews and approves changes that affect their component(s). It is a maintainer’s prime responsibility to review, comment on, co-ordinate and accept patches from
+community members, and to maintain the design cohesion of their components. A project’s maintainers are listed in a MAINTAINERS file in the root of that project’s code repository or documentation page.</p>
+</section>
+<section id="committers">
+<h3>Committers<a class="headerlink" href="#committers" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Committers are contributors who are allowed to commit changes into a repository. The committer acts on the wishes of the maintainer and applies changes that have been approved by the respective maintainer(s) to the repository. Due to their status in the community, committers can also act as referees, should disagreements amongst maintainers arise. Committers are listed on the project’s team web page.</p>
+</section>
+<section id="yonder-hacks-steering-committee">
+<h3>Yonder Hacks Steering Committee<a class="headerlink" href="#yonder-hacks-steering-committee" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The Yonder Hacks Steering Committee consists of members who are committed to steering Yonder Hacks to advance its market and technical success, and who serve as positive ambassadors for the project. The Yonder Hacks Steering Committee manages non-technical aspects of Yonder Hacks including funding for shared project infrastructure, marketing and events, and managing Yonder Hacks trademarks. The Steering Committee leaves all technical decisions to the open source meritocracy.</p>
+</section>
+<section id="mentor">
+<h3>Mentor<a class="headerlink" href="#mentor" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Younger projects may have a need for a mentor to help ensure that the project will be successful. Mentors can be maintainers, project leads, Steering Committee members or other distinguished community members. Mentors are expected to have a monthly review and report back to the community about movement from incubation to maturity.</p>
+</section>
+<section id="sponsor">
+<h3>Sponsor<a class="headerlink" href="#sponsor" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>To form a new Yonder Hacks project or team, we require a sponsor to support the creation of the new project. A sponsor can be a project lead or committer of a mature project, a member of the Steering Committee or the community manager. This ensures that a distinguished community member supports the idea behind the project and is responsible to find an appropriate mentor for the project.</p>
+</section>
+</section>
+<section id="making-contributions">
+<h2>Making Contributions<a class="headerlink" href="#making-contributions" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Making contributions in Yonder Hacks follows the conventions as they are known in the Linux Kernel community. In summary, contributions are made through pull requests that are reviewed by the community. Yonder Hacks does not require community members to sign contribution or committer agreements.</p>
+<p>More information on making contributions can be found at <a class="reference internal" href="contributing.html"><span class="doc">Contributor’s Guide</span></a>.</p>
+</section>
+<section id="elections-and-formal-votes">
+<h2>Elections and Formal Votes<a class="headerlink" href="#elections-and-formal-votes" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="maintainer-elections">
+<h3>Maintainer Elections<a class="headerlink" href="#maintainer-elections" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A contributor who has earned the trust of maintainers (including the Project Lead) can be promoted to Maintainer. A two-stage mechanism is used:</p>
+<ul class="simple">
+<li><p><strong>Nomination:</strong> A maintainer should nominate himself by proposing a patch to the MAINTAINERS file or mailing a nomination to the project’s mailing list. Alternatively another maintainer may nominate a community member. A nomination should explain the contributions of proposed maintainer to the project as well as a scope (set of owned components). Where the case is not obvious, evidence such as specific patches and other evidence supporting the nomination should be cited.</p></li>
+<li><p><strong>Confirmation:</strong> Normally, there is no need for a direct election to confirm a new maintainer. Discussion should happen on the mailing list using the principles of consensus decision making. If there is disagreement or doubt, the project lead or a committer should ask the community manager to arrange a more formal vote.</p></li>
+</ul>
+</section>
+<section id="committer-elections">
+<h3>Committer Elections<a class="headerlink" href="#committer-elections" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A contributor who has earned the trust of committers in their project can also, through an election, be promoted to Committer. A two-stage mechanism is used:</p>
+<ul class="simple">
+<li><p><strong>Nomination:</strong> Community members should nominate candidates by posting a proposal by sending a direct message to the «Appointments» group on Yonder Hacks” Forum, explaining the candidate’s contributions to the project and thus why they should be elected to become a Committer of the project. The nomination should cite evidence such as patches and other contributions where the case is not obvious. Existing Committers will review all proposals, check whether the nominee would be willing to accept the nomination and publish suitable nominations in the Forum publicly for wider community input.</p></li>
+<li><p><strong>Election:</strong> A committer will be elected using the decision making process outlined earlier. Voting will be done by committers for that project privately using a voting form that is created by the community manager. Should there be a negative vote the project lead and community manager will try and resolve the situation and reach consensus. Results will be published in the public forums.</p></li>
+</ul>
+</section>
+<section id="project-lead-elections">
+<h3>Project Lead Elections<a class="headerlink" href="#project-lead-elections" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Projects which lose their project lead are at risk of failing. Should this occur, the project’s maintainer community should agree on a suitable new project lead and follow the election process as outlined above.</p>
+</section>
+<section id="formal-votes">
+<h3>Formal Votes<a class="headerlink" href="#formal-votes" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sometimes it is necessary to conduct formal voting within the Yonder Hacks community (outside of elections). Formal votes are necessary when processes and procedures are introduced or changed, or as part of the Project Governance. Who is eligible to vote, depends on whether the scope of a process or procedure is <strong>local</strong> to a project or team, or whether it affects all projects (<strong>global</strong>). An examples of local scope is a code review policy which applies to the EMR project only. Examples of global scope are changes to this document or votes outlined in the Yonder Hacks Community Governance document.</p>
+<ul class="simple">
+<li><p><strong>Scope:</strong> Local
+- <strong>Who reviews:</strong> Members of developer mailing lists of the affected projects.
+- <strong>Who votes:</strong> Maintainers of the project (or projects), which are affected
+by the process, procedure, etc. are allowed to vote. This includes maintainers
+from incubation projects (if the scope affects the project).</p></li>
+<li><p><strong>Scope:</strong> Global
+- <strong>Who reviews:</strong> Readers of all Yonder Hacks Forum project categories.
+- <strong>Who votes:</strong> Maintainers of all <strong>mature projects</strong> and the Yonder Hacks
+community manager are allowed to vote.</p></li>
+</ul>
+<p>The community manager first arranges a public review, followed by a timed private vote. Public review and voting should be open for a minimum of a week each. For voting a traceable poll mechanism, e.g., a voting system that keeps auditable and tamper proof records, must be used. Voting follows the conventions as laid out in «Principle: Consensus Decision Making».</p>
+</section>
+</section>
+<section id="project-governance">
+<h2>Project Governance<a class="headerlink" href="#project-governance" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="basic-project-life-cycle">
+<h3>Basic Project Life Cycle<a class="headerlink" href="#basic-project-life-cycle" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The proposal is to follow a simple basic flow:</p>
+<figure class="align-center" id="id1">
+<span id="target-to-image"></span><a class="reference internal image-reference" href="http://i.imgur.com/f1mgSxN.png"><img alt="alt tag" src="http://i.imgur.com/f1mgSxN.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">Lifecycle of a basic project</span><a class="headerlink" href="#id1" title="Enlace permanente a esta imagen">¶</a></p>
+</figcaption>
+</figure>
+<p>A project hosted on Yonder Hacks starts with an idea which through the process of project formation will grow into a project proposal. The project proposal will need to satisfy some basic conditions, will be put out for community review and is then put to a vote to all maintainers and project leads of mature Yonder Hacks” hosted projects following the usual decision making process.</p>
+<p>For agreed project proposals, Yonder Hacks will provide basic infrastructure and the project can get started. Projects in incubation are working towards a set of goals, will get additional support and marketing opportunities from Yonder Hacks. However, there will also be regular checkpoints to see whether the project is progressing. Should it turn out that a project is not viable any more, it will be archived after an archival review and vote. For a project to graduate, some basic conditions must be satisfied. If a project in incubation has achieved the point where it believes it is mature enough to graduate, it can request a Graduation community review followed by a vote.</p>
+<p>Mature projects are expected to run themselves. However, at some point a mature project will lose momentum and developers. If this is the case the Yonder Hacks community can request an archival review, which follows the usual pattern.</p>
+<p>Archival reviews have two purposes:</p>
+<ul class="simple">
+<li><p>To give somebody in the community an opportunity to step up and continue a project, and</p></li>
+<li><p>To archive the project outcomes such that they are still available to people who want to use them, but promotion of such projects will cease.</p></li>
+</ul>
+<p>It is also possible to revive archived projects. However these are treated almost like new projects as projects would only be archived if they have become inactive.</p>
+</section>
+<section id="requesting-reviews-reviews-and-voting">
+<h3>Requesting Reviews, Reviews and Voting<a class="headerlink" href="#requesting-reviews-reviews-and-voting" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Requesting Reviews:</strong> Project Proposal and Graduation Reviews are requested by the (prospective) project lead of the project by contacting the community manager providing the necessary documentation. An archival review can be requested by any maintainer of a mature project or by the Yonder Hacks community manager. The community manager will then publish relevant material on the respective forums.</p>
+<p><strong>Reviews:</strong> These are off-line reviews which are open to all community members by which a proposal is published for review. The purpose of the review is two-fold:</p>
+<ul class="simple">
+<li><p>To gather final feedback and input from the community (it is good practice to informally do this before the review), and</p></li>
+<li><p>To advertise the project with the aim to attract interest, users and contributors.</p></li>
+</ul>
+<p>After a review, the requester of the review may decide to withdraw, request a re-review or progress to a vote by arranging with the community manager.</p>
+<p><strong>Voting:</strong> The community manager arranges a timed private vote as outlined in Formal Votes.</p>
+</section>
+<section id="forming-a-project">
+<h3>Forming a Project<a class="headerlink" href="#forming-a-project" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Requirements for forming a project (or team) on Yonder Hacks:</p>
+<ul class="simple">
+<li><p>A project needs a lead, who is willing to become the representating figure of the said project.</p></li>
+<li><p>A project needs a sponsor, which can be a project lead of a mature project, a member of the Yonder Hacks Steering Committee, or the community manager.</p></li>
+<li><p>There should be no dissent from other community members who would qualify as sponsor (see «Principle: Consensus Decision Making»).</p></li>
+<li><p>A project needs a mentor, which can be the project sponsor or a maintainer of a mature project.</p></li>
+<li><p>A project needs to have a relationship to other projects or teams, i.e., it aims to develop software that has a dependency on other projects or teams hosted by Yonder Hacks. If the project needs components in other projects to work, then this should also be stated.</p></li>
+<li><p>A project needs to be large and long-term enough to grant a separate project. For example adding support for a new clinical domain, adding additional functionality on top of existing projects, etc. Adding a new feature to an existing project should be performed within an existing project.</p></li>
+<li><p>A project will deliver code using a license that is compatible with other Yonder Hacks projects, ideally MPL 2.0 HD.</p></li>
+</ul>
+<p>The purpose of the project formation phase is to work out what the project is about, get community buy-in and help the future project gain publicity and momentum. The formation phase is driven by that project’s project lead. The project mentor’s role is to advise and support the project lead in getting the project started.</p>
+<p>The project proposal is a document that is published on the official platform and describes:</p>
+<ul class="simple">
+<li><p>What the project is aiming to achieve, i.e., the project charter and project goals,</p></li>
+<li><p>What components/code and in which code lines (new or components in other projects) the project aims to deliver,</p></li>
+<li><p>Key dependencies on other Yonder Hacks projects or teams, if applicable,</p></li>
+<li><p>A list of initial maintainers, if applicable,</p></li>
+<li><p>A lists of any interested parties in the project, if applicable,</p></li>
+<li><p>A lists of any planned initial code contributions, if applicable, and</p></li>
+<li><p>A rough plan on how to get through the Incubation phase.</p></li>
+</ul>
+</section>
+<section id="project-proposal-review">
+<h3>Project Proposal Review<a class="headerlink" href="#project-proposal-review" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The review is initiated by the project lead and follows the rules outlined in «Requesting Reviews, Reviews and Voting».</p>
+<p>After a successful review, the following resources will be created for the project:</p>
+<ul class="simple">
+<li><p>A category in the Yonder Hacks forums,</p></li>
+<li><p>A code repository, and</p></li>
+<li><p>A project or team page on the official platform, in an area separate from mature projects, to be maintained by the project lead.</p></li>
+</ul>
+</section>
+<section id="incubating-a-project">
+<h3>Incubating a Project<a class="headerlink" href="#incubating-a-project" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The purpose of the incubation phase is for a project to show that it is gathering momentum and adheres to the «Principles &amp; Roles» of Yonder Hacks projects. The project mentor will work closely with the project lead and there are at least quarterly informal review meetings with the mentor on how the project is doing. Should a mentor not be able to fulfill his/her role any more,
+it is the responsibility of the project lead to find another mentor. We advise that the project lead gives at least quarterly updates on the Yonder Hacks blog
+on how the project is doing.</p>
+<p>Yonder Hacks will provide support to incubating projects. The project lead will work closely with the Yonder Hacks community manager as well as with the project mentor.</p>
+</section>
+<section id="archiving-an-incubating-project">
+<h3>Archiving an Incubating project<a class="headerlink" href="#archiving-an-incubating-project" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The mentor can request for a project to be archived, if the project is not making sufficient progress. See «Archival Review».</p>
+<p>Graduation Review</p>
+<p>The review is initiated by the project lead and follows the rules outlined in «Requesting Reviews, Reviews and Voting». In essence, the project lead makes a pitch to the community about why the project should graduate.</p>
+<p>A project must fulfill the following requirements before it can graduate:</p>
+<ol class="arabic simple">
+<li><p>It follows the principles of openness, transparency and meritocracy.</p></li>
+<li><p>It has delivered at least one functioning release of what it is aiming to deliver.</p></li>
+<li><p>It has a public code repository which shows active development, has mechanisms to accept patches, and a history of accepting patches.</p></li>
+<li><p>It has a public forum that is active.</p></li>
+<li><p>It has a mechanism for users to raise bugs and for developers to work on bugs.</p></li>
+<li><p>It has an active developer community, including multiple maintainers, a diverse profile of individuals, etc.</p></li>
+</ol>
+<p>Other items to look at during the review (depending on project are):</p>
+<ol class="arabic simple">
+<li><p>It has up-to-date documentation and a core and group of people maintaining it.</p></li>
+<li><p>It publishes regular builds and tests.</p></li>
+<li><p>It promotes itself at Yonder Hacks events and on the Yonder Hacks blog.</p></li>
+</ol>
+</section>
+<section id="mature-projects">
+<h3>Mature Projects<a class="headerlink" href="#mature-projects" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Mature projects are expected to be run and promote themselves. The project lead has significant responsibility in ensuring that this happens. The Yonder Hacks Steering Committee and the community manager will help organize events, provide opportunities for the project to get new contributors and build a community, promote new releases on the blog and to the press, work with project members, etc. However the Yonder Hacks Steering Committee and the community manager will not get involved in the day-to-day running of the project.</p>
+<p>At some point during its lifecycle, a project may lose momentum. In other words, developers and users are not interested in the project any more. If this is the case, it may be time to archive the project. If the project has achieved its goals and is thus completed, it may also be time to archive the project.</p>
+</section>
+<section id="archival-review">
+<h3>Archival Review<a class="headerlink" href="#archival-review" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>These can happen in a number of situations:</p>
+<ul class="simple">
+<li><p>An incubation project shows clear signs of failing and not progressing.</p></li>
+<li><p>A mature project has lost its developer and user base, and there is little or no activity.</p></li>
+<li><p>The project has achieved its goals and/or fulfilled its charter. In other words, it has completed.</p></li>
+</ul>
+<p>In the first case, the review is triggered by the incubation project’s mentor. Failing this, the review can be requested by any maintainer of any mature project (including the project’s lead) or by the Yonder Hacks community manager. See «Requesting Reviews, Reviews and Voting».</p>
+<p>The review is essentially a pitch why the project should be archived. The purpose of the review is not necessarily to archive a project, but also to provide a last opportunity for interested parties in the Yonder Hacks community to save the project and step up. The Yonder Hacks community manager will support efforts to save the project, should community members want to step up. In the case where a project has been completed, the normal situation would be for the project lead to make the case for archival.</p>
+</section>
+<section id="archived-projects">
+<h3>Archived Projects<a class="headerlink" href="#archived-projects" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>When a project is archived, the following happens:</p>
+<ol class="arabic simple">
+<li><p>The code repository and forums will be made read-only and made accessible from an «archived projects» section of the official platform.</p></li>
+<li><p>The project’s documentation pages will be tagged as «archived». A project may be completed, i.e.,  it has achieved its goals and/or fulfilled its charter, in which case it is tagged as «completed» and «archived».</p></li>
+<li><p>The project or team page on the official platform will be moved into an «Archive» or «Completed» section.</p></li>
+</ol>
+<p>In cases where the project has delivered code into other Yonder Hacks projects, the code will be:</p>
+<ul class="simple">
+<li><p>Deprecated at the point where the project is archived, and</p></li>
+<li><p>The project which now contains the archived code can (but does not have to) remove the code in a subsequent release (it should however give users sufficient time to adapt)</p></li>
+</ul>
+</section>
+</section>
+<section id="exceptional-circumstances">
+<h2>Exceptional Circumstances<a class="headerlink" href="#exceptional-circumstances" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="projects-without-project-lead">
+<h3>Projects without Project Lead<a class="headerlink" href="#projects-without-project-lead" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Projects which lose their project lead during the incubation or maturity phase are at risk of failing. Should this occur, the project’s maintainer community should agree who would want to be/be able to be the new project lead and follow the election process as outlined in «Electing Maintainers».</p>
+<p>If a project lead leaves during the formation phase without finding a successor, we assume that the project does not have enough momentum and will not go ahead.</p>
+</section>
+<section id="incubation-projects-without-mentor">
+<h3>Incubation projects without Mentor<a class="headerlink" href="#incubation-projects-without-mentor" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Should an incubation project lose its mentor, the Yonder Hacks community manager will support the project lead in finding a new mentor.</p>
+</section>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>This work, «Yonder Hacks Community Governance», is a derivative of «Xen Project Governance» by Xen Project, used under the Creative Commons Attribution 3.0 License (CC BY 3.0). «Yonder Hacks  Community Governance» is licensed under the Creative Commons 4.0 International Attribution License (CC BY 4.0) by Humanitech
+Inc.</em></p>
+</section>
+<section id="change-history">
+<h2>Change History<a class="headerlink" href="#change-history" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">--ver. 0.1-- Initial Draft, 19 October 2019</span>
+<span class="go">--ver. 0.2-- Update with Notice, 27 June 2021</span>
+<span class="go">--ver. 0.3-- Upgraded to Read the Docs, 04 February 2022</span>
+</pre></div>
+</div>
+</section>
+<section id="maintainer">
+<h2>Maintainer<a class="headerlink" href="#maintainer" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><a class="reference external" href="https://github.com/uchennaanya">Anya Uchenna</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">* Copyright Yonder Hacks Contributors</span>
+
+<span class="go">* SPDX Identifier: Apache-2.0</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="safeguarding.html" class="btn btn-neutral float-right" title="Safeguarding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contributing.html" class="btn btn-neutral float-left" title="Contributor’s Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Yonder Hacks
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
